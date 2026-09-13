@@ -1,4 +1,4 @@
-\# Thermal Moisture Detection
+# Thermal Moisture Detection
 
 
 
@@ -10,7 +10,7 @@ The project explores multiple deep-learning architectures, controlled model opti
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -26,11 +26,11 @@ The final system combines three complementary segmentation models:
 
 
 
-\- \*\*DeepLabV3+ with ResNet-50\*\*
+- **DeepLabV3+ with ResNet-50**
 
-\- \*\*SegFormer MIT-B0\*\*
+- **SegFormer MIT-B0**
 
-\- \*\*SegFormer MIT-B1\*\*
+- **SegFormer MIT-B1**
 
 
 
@@ -38,7 +38,7 @@ Their predictions are combined through a weighted ensemble to obtain the final m
 
 
 
-\## Project Workflow
+## Project Workflow
 
 
 
@@ -46,7 +46,7 @@ The project followed a progressive workflow, starting from the study of existing
 
 
 
-\### Preliminary Research and Data Preparation
+### Preliminary Research and Data Preparation
 
 
 
@@ -56,47 +56,47 @@ Study of existing research and previous approaches for thermal-image analysis, m
 
 
 
-2\. Data Collection and Annotation
+2. Data Collection and Annotation
 
 Collection of suitable thermal images from publicly available sources, followed by the preparation of pixel-level moisture segmentation masks for supervised learning.
 
 
 
-\### Experimental Development
+### Experimental Development
 
 
 
-3\. Model Selection
+3. Model Selection
 
 Comparison of several semantic-segmentation architectures to identify promising candidate models for the task.
 
 
 
-4\. Final Model Comparison
+4. Final Model Comparison
 
 Quantitative and qualitative comparison of the selected models trained during the model-selection stage, including analysis of their predictions and segmentation quality. This stage identified the strongest individual model and motivated its subsequent optimization.
 
 
 
-5\. ResNet-50 Optimization
+5. ResNet-50 Optimization
 
 Controlled experiments investigating learning rates, loss functions, augmentation, resolution, discriminative learning rates, boundary-aware losses, and prediction thresholds in an attempt to further improve the selected ResNet-50 model.
 
 
 
-6\. Ensembling
+6. Ensembling
 
 Analysis of model agreement and complementarity, followed by weighted ensemble optimization to combine the complementary strengths of the selected models.
 
-\## Dataset
+## Dataset
 
 
 
-The thermal images used in this project originate from publicly available thermal imagery collected through \*\*Roboflow\*\*.
+The thermal images used in this project originate from publicly available thermal imagery collected through **Roboflow**.
 
 
 
-The pixel-level moisture segmentation masks were \*\*created and prepared independently for this project\*\*, providing the annotations required for supervised semantic segmentation.
+The pixel-level moisture segmentation masks were **created and prepared independently for this project**, providing the annotations required for supervised semantic segmentation.
 
 
 
@@ -108,15 +108,15 @@ The original dataset used during development is publicly available on Kaggle:
 
 
 
-\*\*\[Humidity Thermal Dataset](https://www.kaggle.com/datasets/ebyeager/humidity-thermal)\*\*
+**[Humidity Thermal Dataset](https://www.kaggle.com/datasets/ebyeager/humidity-thermal)**
 
 
 
-The dataset itself is \*\*not included in this repository\*\*.
+The dataset itself is **not included in this repository**.
 
 
 
-\## Dataset Structure
+## Dataset Structure
 
 
 
@@ -128,21 +128,21 @@ The training data follows an image-mask segmentation setup:
 
 images/
 
-&#x20;   image\_001.jpg
+   image\_001.jpg
 
-&#x20;   image\_002.jpg
+   image\_002.jpg
 
-&#x20;   ...
+   ...
 
 
 
 masks/
 
-&#x20;   image\_001.png
+   image\_001.png
 
-&#x20;   image\_002.png
+   image\_002.png
 
-&#x20;   ...
+   ...
 
 ```
 
@@ -152,11 +152,11 @@ Each mask corresponds to its associated thermal image and identifies the pixels 
 
 
 
-\## Models
+## Models
 
 
 
-\### DeepLabV3+ — ResNet-50
+### DeepLabV3+ — ResNet-50
 
 
 
@@ -168,7 +168,7 @@ The original ResNet-50 model was retained for the final ensemble after controlle
 
 
 
-\### SegFormer — MIT-B0
+### SegFormer — MIT-B0
 
 
 
@@ -176,7 +176,7 @@ A transformer-based semantic-segmentation architecture selected as one of the co
 
 
 
-\### SegFormer — MIT-B1
+### SegFormer — MIT-B1
 
 
 
@@ -184,7 +184,7 @@ A larger SegFormer variant that achieved the strongest validation performance am
 
 
 
-\## Model Optimization
+## Model Optimization
 
 
 
@@ -192,21 +192,21 @@ The ResNet-50 model was investigated through a series of controlled experiments,
 
 
 
-\- Learning-rate variations
+- Learning-rate variations
 
-\- BCE + Dice loss
+- BCE + Dice loss
 
-\- Focal + Dice loss
+- Focal + Dice loss
 
-\- Prediction-threshold optimization
+- Prediction-threshold optimization
 
-\- Offline segmentation augmentation
+- Offline segmentation augmentation
 
-\- Higher input resolution
+- Higher input resolution
 
-\- Discriminative learning rates
+- Discriminative learning rates
 
-\- Boundary-aware loss
+- Boundary-aware loss
 
 
 
@@ -214,7 +214,7 @@ The experiments demonstrated an important distinction between validation improve
 
 
 
-\## Ensemble
+## Ensemble
 
 
 
@@ -250,7 +250,7 @@ The ensemble was selected after evaluating both model agreement and prediction c
 
 
 
-\## Final Test Performance
+## Final Test Performance
 
 
 
@@ -276,7 +276,7 @@ These results correspond to the held-out test set used during the project evalua
 
 
 
-\## Application
+## Application
 
 
 
@@ -332,11 +332,11 @@ thermal\_moisture\_app/
 
 
 
-The trained checkpoints are distributed using \*\*Git LFS\*\*.
+The trained checkpoints are distributed using **Git LFS**.
 
 
 
-\## Notebooks
+## Notebooks
 
 
 
@@ -360,7 +360,7 @@ Notebooks/
 
 
 
-The notebooks were developed and executed in \*\*Kaggle\*\*.
+The notebooks were developed and executed in **Kaggle**.
 
 
 
@@ -368,7 +368,7 @@ Their original Kaggle-specific dataset and output paths have intentionally been 
 
 
 
-\## Repository Structure
+## Repository Structure
 
 
 
@@ -412,7 +412,7 @@ The original dataset, literature resources, and intermediate experimental result
 
 
 
-\## Limitations
+## Limitations
 
 
 
@@ -420,7 +420,7 @@ The current system was developed using a publicly available thermal-image datase
 
 
 
-Therefore, the current model should be considered a \*\*general thermal moisture-segmentation prototype\*\*, rather than a validated deployment system for a specific building.
+Therefore, the current model should be considered a **general thermal moisture-segmentation prototype**, rather than a validated deployment system for a specific building.
 
 
 
@@ -428,21 +428,21 @@ Performance may vary depending on:
 
 
 
-\- Thermal camera characteristics
+- Thermal camera characteristics
 
-\- Environmental conditions
+- Environmental conditions
 
-\- Building materials
+- Building materials
 
-\- Moisture patterns
+- Moisture patterns
 
-\- Image acquisition conditions
+- Image acquisition conditions
 
-\- Differences between the training data and real-world deployment environments
+- Differences between the training data and real-world deployment environments
 
 
 
-\## Future Work
+## Future Work
 
 
 
@@ -450,50 +450,49 @@ Potential extensions include:
 
 
 
-\- Acquisition of dedicated thermal imagery from real buildings
+- Acquisition of dedicated thermal imagery from real buildings
 
-\- RGB + thermal multimodal learning
+- RGB + thermal multimodal learning
 
-\- Integration of photogrammetry and 3D reconstruction
+- Integration of photogrammetry and 3D reconstruction
 
-\- Building-specific fine-tuning
+- Building-specific fine-tuning
 
-\- Quantitative moisture-level estimation
+- Quantitative moisture-level estimation
 
-\- Larger and more diverse datasets
+- Larger and more diverse datasets
 
-\- Domain adaptation for different thermal cameras and environments
-
-
-
-\## Technologies
+- Domain adaptation for different thermal cameras and environments
 
 
 
-\- Python
-
-\- PyTorch
-
-\- Segmentation Models / Deep Learning
-
-\- DeepLabV3+
-
-\- SegFormer
-
-\- ResNet-50
-
-\- Computer Vision
-
-\- Semantic Segmentation
-
-\- Git LFS
-
-\- Kaggle
+## Technologies
 
 
 
-\## License
+- Python
 
+- PyTorch
+
+- Segmentation Models / Deep Learning
+
+- DeepLabV3+
+
+- SegFormer
+
+- ResNet-50
+
+- Computer Vision
+
+- Semantic Segmentation
+
+- Git LFS
+
+- Kaggle
+
+
+
+## License
 
 
 This repository contains code, notebooks, and trained model checkpoints developed as part of this project.
