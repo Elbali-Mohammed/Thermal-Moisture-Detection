@@ -1,0 +1,19 @@
+{
+  "image_height": 384,
+  "image_width": 512,
+  "normalization": {
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225]
+  },
+  "checkpoints": {
+    "deeplab_r50": "../models/deeplabv3plus_resnet50_best.pth",
+    "segformer_b0": "../models/segformer_mit_b0_best.pth",
+    "segformer_b1": "../models/segformer_mit_b1_best.pth"
+  },
+  "ensemble": {
+    "r50_weight": 0.3,
+    "b0_weight": 0.3,
+    "b1_weight": 0.4,
+    "threshold": 0.625
+  }
+}

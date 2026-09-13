@@ -1,0 +1,22 @@
+# Local datasets and research materials
+DATA/
+Litterature/
+Results/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

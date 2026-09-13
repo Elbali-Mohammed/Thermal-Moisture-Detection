@@ -1,0 +1,10 @@
+streamlit>=1.37
+torch>=2.2
+torchvision>=0.17
+# The saved SegFormer checkpoints use the Transformers 4.x parameter layout.
+# Transformers 5.x renamed internal modules and cannot load them directly.
+transformers>=4.38,<5.0
+segmentation-models-pytorch>=0.3.3
+Pillow>=10.0
+numpy>=1.26
+reportlab>=4.2
