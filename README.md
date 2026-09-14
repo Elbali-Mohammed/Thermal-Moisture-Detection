@@ -153,7 +153,7 @@ The implementation and evaluation of these candidate models are provided in **`N
 
 Following the model-selection and subsequent optimization experiments, three complementary models were retained for the final ensemble:
 
-#### DeepLabV3+ — ResNet-50
+#### - DeepLabV3+ — ResNet-50
 
 A convolutional semantic-segmentation architecture using ResNet-50 as the encoder.
 
@@ -168,7 +168,7 @@ A transformer-based semantic-segmentation architecture selected as one of the co
 A larger SegFormer variant that achieved the strongest validation performance among the selected individual models.
 
 
-## - Model Optimization
+##  Model Optimization
 
 
 
