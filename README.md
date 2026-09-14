@@ -46,45 +46,25 @@ The project followed a progressive workflow, starting from the study of existing
 
 
 
-### Preliminary Research and Data Preparation
-
-
-
-1. Literature Review and Related Work
-
-Study of existing research and previous approaches for thermal-image analysis, moisture detection, and semantic segmentation in order to identify relevant methodologies and establish the experimental direction.
-
-
-
-2. Data Collection and Annotation
-
-Collection of suitable thermal images from publicly available sources, followed by the preparation of pixel-level moisture segmentation masks for supervised learning.
-
-
-
-### Experimental Development
-
-
-
-3. Model Selection
+1. Model Selection
 
 Comparison of several semantic-segmentation architectures to identify promising candidate models for the task.
 
 
 
-4. Final Model Comparison
+2. Final Model Comparison
 
 Quantitative and qualitative comparison of the selected models trained during the model-selection stage, including analysis of their predictions and segmentation quality. This stage identified the strongest individual model and motivated its subsequent optimization.
 
 
 
-5. ResNet-50 Optimization
+3. ResNet-50 Optimization
 
 Controlled experiments investigating learning rates, loss functions, augmentation, resolution, discriminative learning rates, boundary-aware losses, and prediction thresholds in an attempt to further improve the selected ResNet-50 model.
 
 
 
-6. Ensembling
+4. Ensembling
 
 Analysis of model agreement and complementarity, followed by weighted ensemble optimization to combine the complementary strengths of the selected models.
 
