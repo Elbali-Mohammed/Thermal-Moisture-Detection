@@ -357,9 +357,9 @@ Thermal-Moisture-Detection/
 
 │   ├── 01_model_selection.ipynb
 
-│   ├── 02_resnet50_optimization.ipynb
+│   ├── 02_final_comparison.ipynb
 
-│   ├── 03_final_comparison.ipynb
+│   ├── 03_resnet50_optimization.ipynb
 
 │   └── 04_ensembling.ipynb
 
