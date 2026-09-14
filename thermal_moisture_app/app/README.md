@@ -36,6 +36,4 @@ python -m pip install -r app/requirements.txt
 streamlit run app/app.py
 ```
 
-Streamlit will open the local application in a browser. Upload a PNG, JPG, JPEG, TIFF, or TIF thermal image.
-
-then make the matching architecture-only adjustment (for example, `classes`, `num_labels`, or checkpoint key). This does not change the finalized model or evaluation.
+Streamlit will open the local application in a browser. Upload thermal image(s).
