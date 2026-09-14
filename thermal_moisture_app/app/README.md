@@ -31,7 +31,9 @@ If the model filenames or locations are changed, update the corresponding three 
 ## 2. Requirements
 
 -Python 3.x
+
 -Git LFS
+
 -Dependencies listed in app/requirements.txt
 
 Because the trained checkpoints are stored using Git LFS, Git LFS must be installed before cloning or downloading the repository.
