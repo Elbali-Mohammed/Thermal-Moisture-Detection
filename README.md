@@ -152,36 +152,41 @@ Each mask corresponds to its associated thermal image and identifies the pixels 
 
 
 
-## Final Models
+## Models
 
+### Models Explored
 
+Several semantic-segmentation architectures and encoder combinations were evaluated during the model-selection stage:
+
+- **U-Net — ResNet-34**
+- **U-Net++ — ResNet-34**
+- **DeepLabV3+ — ResNet-34**
+- **DeepLabV3+ — ResNet-50**
+- **DeepLabV3+ — EfficientNet-B2**
+- **SegFormer — MIT-B0**
+- **SegFormer — MIT-B1**
+
+These models were selected to compare different segmentation paradigms, including conventional encoder-decoder architectures, nested skip-connection designs, convolutional multi-scale feature extraction, and transformer-based segmentation.
+
+The implementation and evaluation of these candidate models are provided in **`Notebooks/01_model_selection.ipynb`**.
+
+### Models Selected for the Final Ensemble
+
+Following the model-selection and subsequent optimization experiments, three complementary models were retained for the final ensemble:
 
 ### DeepLabV3+ — ResNet-50
 
-
-
 A convolutional semantic-segmentation architecture using ResNet-50 as the encoder.
-
-
 
 The original ResNet-50 model was retained for the final ensemble after controlled optimization experiments showed that the optimized variants did not improve the final test performance sufficiently.
 
-
-
 ### SegFormer — MIT-B0
-
-
 
 A transformer-based semantic-segmentation architecture selected as one of the complementary models.
 
-
-
 ### SegFormer — MIT-B1
 
-
-
 A larger SegFormer variant that achieved the strongest validation performance among the selected individual models.
-
 
 
 ## Model Optimization
