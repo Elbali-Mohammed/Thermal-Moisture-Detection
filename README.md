@@ -128,9 +128,9 @@ The training data follows an image-mask segmentation setup:
 
 images/
 
-   image\_001.jpg
+   image_001.jpg
 
-   image\_002.jpg
+   image_002.jpg
 
    ...
 
@@ -138,9 +138,9 @@ images/
 
 masks/
 
-   image\_001.png
+   image_001.png
 
-   image\_002.png
+   image_002.png
 
    ...
 
@@ -223,13 +223,9 @@ The final system combines the three selected models using a weighted probability
 
 
 | Model | Weight |
-
 |---|---:|
-
 | DeepLabV3+ ResNet-50 | 0.30 |
-
 | SegFormer MIT-B0 | 0.30 |
-
 | SegFormer MIT-B1 | 0.40 |
 
 
@@ -259,16 +255,11 @@ The final ensemble achieved:
 
 
 | Metric | Score |
-
 |---|---:|
-
-| Dice Score | \*\*0.8504\*\* |
-
-| IoU | \*\*0.7724\*\* |
-
-| Precision | \*\*0.8668\*\* |
-
-| Recall | \*\*0.8732\*\* |
+| Dice Score | **0.8504** |
+| IoU | **0.7724** |
+| Precision | **0.8668** |
+| Recall | **0.8732** |
 
 
 
@@ -286,7 +277,7 @@ A local inference application is included in:
 
 ```text
 
-thermal\_moisture\_app/
+thermal_moisture_app/
 
 ```
 
@@ -302,7 +293,7 @@ It contains:
 
 ```text
 
-thermal\_moisture\_app/
+thermal_moisture_app/
 
 ├── app/
 
@@ -312,7 +303,7 @@ thermal\_moisture\_app/
 
 │   ├── reporting.py
 
-│   ├── ensemble\_config.json
+│   ├── ensemble_config.json
 
 │   ├── requirements.txt
 
@@ -322,11 +313,11 @@ thermal\_moisture\_app/
 
 └── models/
 
-&#x20;   ├── deeplabv3plus\_resnet50\_best.pth
+   ├── deeplabv3plus_resnet50_best.pth
 
-&#x20;   ├── segformer\_mit\_b0\_best.pth
+   ├── segformer_mit_b0_best.pth
 
-&#x20;   └── segformer\_mit\_b1\_best.pth
+   └── segformer_mit_b1_best.pth
 
 ```
 
@@ -348,13 +339,13 @@ The complete experimental workflow is provided in the `Notebooks/` directory:
 
 Notebooks/
 
-├── 01\_model\_selection.ipynb
+├── 01_model_selection.ipynb
 
-├── 02\_resnet50\_optimization.ipynb
+├── 02_resnet50_optimization.ipynb
 
-├── 03\_final\_comparison.ipynb
+├── 03_final_comparison.ipynb
 
-└── 04\_ensembling.ipynb
+└── 04_ensembling.ipynb
 
 ```
 
@@ -380,17 +371,17 @@ Thermal-Moisture-Detection/
 
 ├── Notebooks/
 
-│   ├── 01\_model\_selection.ipynb
+│   ├── 01_model_selection.ipynb
 
-│   ├── 02\_resnet50\_optimization.ipynb
+│   ├── 02_resnet50_optimization.ipynb
 
-│   ├── 03\_final\_comparison.ipynb
+│   ├── 03_final_comparison.ipynb
 
-│   └── 04\_ensembling.ipynb
+│   └── 04_ensembling.ipynb
 
 │
 
-├── thermal\_moisture\_app/
+├── thermal_moisture_app/
 
 │   ├── app/
 
