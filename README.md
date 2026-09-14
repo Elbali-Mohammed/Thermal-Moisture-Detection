@@ -147,7 +147,7 @@ Several semantic-segmentation architectures and encoder combinations were evalua
 - **SegFormer — MIT-B1**
 
 
-The implementation and evaluation of these candidate models are provided in **`Notebooks/01_model_selection.ipynb`**.
+The implementation and evaluation of these candidate models are provided in **[`Notebooks/01_model_selection.ipynb`](https://nbviewer.org/github/Elbali-Mohammed/Thermal-Moisture-Detection/blob/main/Notebooks/01_model_selection.ipynb)** *(viewable via nbviewer due to file size)*.
 
 ### Models Selected for the Final Ensemble
 
