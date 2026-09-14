@@ -1,6 +1,6 @@
 # Thermal Moisture Segmentation Prototype
 
-This small Streamlit app packages the **final frozen ensemble** from the project:
+This Streamlit app packages the **final frozen ensemble** from the project:
 
 `0.30 × DeepLabV3+ ResNet-50 + 0.30 × SegFormer B0 + 0.40 × SegFormer B1`
 
@@ -24,13 +24,8 @@ project-root/
 
 If your filenames or location are different, edit only the three paths under `checkpoints` in `app/ensemble_config.json`.
 
-## 2. Match the notebook preprocessing before use
 
-The app defaults to the known inference size (`384 x 512`) and common ImageNet normalization. Before running it, compare `image_height`, `image_width`, `mean`, and `std` in `ensemble_config.json` to the validation/test transform in the final ensemble notebook. Copy those notebook values exactly if they differ.
-
-The app intentionally does not expose weights or threshold as controls: they are frozen at the validated values.
-
-## 3. Install and run
+## 2. Install and run
 
 From the project root:
 
@@ -63,7 +58,3 @@ It recreates the architectures assumed by the ensemble notebook:
 - Hugging Face `SegformerForSemanticSegmentation`, `nvidia/mit-b0` and `nvidia/mit-b1`, two output classes where class 1 is humidity.
 
 If a checkpoint fails to load, do not retrain. Compare the cell where that particular model was created in the notebook with `build_models()` in `inference.py`, then make the matching architecture-only adjustment (for example, `classes`, `num_labels`, or checkpoint key). This does not change the finalized model or evaluation.
-
-## Scope and limitation
-
-The displayed humid-area percentage is the fraction of image pixels predicted as humid, not a direct physical measurement of material moisture. This prototype is not validated for Hassan II Mosque drone imagery or arbitrary thermal cameras; target-domain data collection and validation remain future work.
