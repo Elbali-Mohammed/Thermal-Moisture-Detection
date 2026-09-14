@@ -146,7 +146,6 @@ Several semantic-segmentation architectures and encoder combinations were evalua
 - **SegFormer — MIT-B0**
 - **SegFormer — MIT-B1**
 
-These models were selected to compare different segmentation paradigms, including conventional encoder-decoder architectures, nested skip-connection designs, convolutional multi-scale feature extraction, and transformer-based segmentation.
 
 The implementation and evaluation of these candidate models are provided in **`Notebooks/01_model_selection.ipynb`**.
 
