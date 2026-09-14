@@ -159,16 +159,16 @@ A convolutional semantic-segmentation architecture using ResNet-50 as the encode
 
 The original ResNet-50 model was retained for the final ensemble after controlled optimization experiments showed that the optimized variants did not improve the final test performance sufficiently.
 
-#### SegFormer — MIT-B0
+#### - SegFormer — MIT-B0
 
 A transformer-based semantic-segmentation architecture selected as one of the complementary models.
 
-#### SegFormer — MIT-B1
+#### - SegFormer — MIT-B1
 
 A larger SegFormer variant that achieved the strongest validation performance among the selected individual models.
 
 
-## Model Optimization
+## - Model Optimization
 
 
 
